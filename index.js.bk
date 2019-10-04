@@ -21,6 +21,7 @@ app.use(function(req, res, next){
 app.all('*', (req, res) => {
   const echo = {
     path: req.path,
+    headers: req.headers,
     method: req.method,
     body: req.body,
     cookies: req.cookies,
